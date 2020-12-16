@@ -1,6 +1,7 @@
 from st7789 import ST7789, color565
 from machine import Pin, SPI
 from xglcd_font import XglcdFont
+from sysfont import sysfont #sysfont for drawing text
 from time import sleep
 
 class UI(object):
