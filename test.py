@@ -11,7 +11,7 @@ from gc import mem_free, collect
 
 def main():
     spi = machine.SPI(1, baudrate=8000000, polarity=1, phase=1, sck=Pin(18, Pin.OUT, Pin.PULL_DOWN), mosi=Pin(23, Pin.OUT, Pin.PULL_UP), miso=Pin(19,Pin.IN, Pin.PULL_UP))
-    display = st7789.ST7789(spi, 240, 240, reset=machine.Pin(2, machine.Pin.OUT, Pin.PULL_UP), dc=machine.Pin(4, machine.Pin.OUT, Pin.PULL_UP),)
+    display = st7789.ST7789(spi, 240, 240, reset=Pin(2, machine.Pin.OUT, Pin.PULL_UP), dc=Pin(4, machine.Pin.OUT, Pin.PULL_UP),)
     display.init()
     display.fill(st7789.color565(128,128,255))
     graphics = gfx.GFX(240, 240, display.pixel)
@@ -24,3 +24,5 @@ def main():
         # Pause 2 seconds.
         time.sleep(0.5)
 
+if __name__ == "__main__":
+    main()
