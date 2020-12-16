@@ -1,16 +1,16 @@
 import ure as re
 import picoweb
 from ui import UI
-from machine import RTC
 import network
+from gc import collect
+collect()
 sta_if = network.WLAN(network.STA_IF)
 ifconfig = sta_if.ifconfig()
 print('Start UI')
 ui = UI()
 ui.cls()
+ui.draw()
 
-rtc = RTC()
-print(rtc.datetime())
 
 def index(req, resp):
     # You can construct an HTTP response completely yourself, having
