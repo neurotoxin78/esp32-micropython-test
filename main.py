@@ -57,4 +57,4 @@ app = picoweb.WebApp(__name__, ROUTES)
 # 0 (False) normal logging: requests and errors
 # 1 (True) debug logging
 # 2 extra debug logging
-app.run(debug=True, host = "10.175.1.36", port = '80')
+app.run(debug=True, host = ifconfig[0], port = '80')

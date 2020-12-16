@@ -36,5 +36,5 @@ class UI(object):
         """
         docstring
         """
-        self.display.draw_text(0, 0, 'Booting UI', self.unispace, color565(255, 128, 64), landscape=False)
+        self.display.draw_text(0, 0, 'Booting UI', self.unispace, color565(255, 32, 64), landscape=False)
         sleep(2)
